@@ -1,0 +1,5 @@
+
+<h2><%= @list.name %></h2>
+
+<button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false">Delete List</button>
+  <%= link_to "", list_path(@list), method: :delete, data: { confirm: "Delete list?" } %>
