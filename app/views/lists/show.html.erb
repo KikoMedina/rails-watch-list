@@ -1,5 +1,9 @@
 
 <h2><%= @list.name %></h2>
 
+<div class="container">
+    <h1>Save any kind of movies</h1>
+  </div>
+
 <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false">Delete List</button>
-  <%= link_to "", list_path(@list), method: :delete, data: { confirm: "Delete list?" } %>
+<%= link_to "", bookmark_url, method: :delete, data: { confirm: "Delete list?" } %>
