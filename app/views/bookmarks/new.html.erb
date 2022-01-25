@@ -7,11 +7,11 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-        <% simple_form_for [ @list, @bookmark ] do |f| %>
-        <%= f.input :comment %>
-        <%= f.association :movie %>
-        <%= f.association :list %>
-        <%= f.button :submit, class: "btn btn-success" %>
+        <h2> Add a movie to <%= @list.name %> </h2>
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :comment, placeholder: "Comment the movie" %>
+        <%= f.association :movie, prompt: "Select", input_html: { class: "select2"} %>
+        <%= f.submit class: "btn btn-success" %>
         <% end %>
     </div>
   </div>
