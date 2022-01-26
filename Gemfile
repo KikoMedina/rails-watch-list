@@ -55,3 +55,5 @@ gem 'simple_form'
 
 gem 'nokogiri'
 gem 'open-uri'
+
+gem 'dotenv-rails', groups: [:development, :test]
