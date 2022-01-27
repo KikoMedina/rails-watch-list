@@ -8,6 +8,7 @@
     <div class="col-12 col-md-8"">
     <%= simple_form_for(@list) do |f| %>
     <%= f.input :name, placeholder: "Add a list name" %>
+    <%= f.input :photo %>
     <%= f.submit "Create List", class: "btn btn-primary" %>
     <% end %>
     </div>
