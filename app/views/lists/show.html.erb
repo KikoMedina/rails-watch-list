@@ -1,23 +1,5 @@
-<% if @list.photo.attached? %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>')">
-  <div class="text-center">
-  </div>
-   <div class="text-center">
-    <h1><%= @list.name %></h1>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : asset_path('adrian-cogua-oWrskhOkZtY-unsplash.jpg') %>)">
 </div>
-
-<% else %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);">
-  <div class="text-center">
-  </div>
-  <div class="text-center">
-    <h1><%= @list.name %></h1>
-    </div>
-  </div>
-</div>
-<% end %>
-
 
 <div class="container">
   <div class="card-title">
